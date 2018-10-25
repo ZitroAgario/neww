@@ -25,16 +25,7 @@ class Board extends React.Component{
 			</ul>
 		)
 	}
-}
-class Card extends React.Component{
-	render(){
-		return(
-			<li className={ "card " + this.props.modem } >
-        			<i className={ "fa fa-" + this.props.kind } onclick={this.props.click} ></i>
-        		</li>
-       		)
-	}
-	handle(i){
+	handler(i){
 		const cards=document.querySelectorAll(".card");
 		const elem=cards[i]
 		const open=document.querySelectorAll(".show");
@@ -61,5 +52,14 @@ class Card extends React.Component{
 					break;
 			}
 		}
+	}
+}
+class Card extends React.Component{
+	render(){
+		return(
+			<li className={ "card " + this.props.modem } >
+        			<i className={ "fa fa-" + this.props.kind } onclick={this.props.click} ></i>
+        		</li>
+       		)
 	}
 }
