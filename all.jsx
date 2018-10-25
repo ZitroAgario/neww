@@ -38,7 +38,7 @@ class Card extends React.Component{
 		const cards=document.querySelectorAll(".card");
 		const elem=cards[i]
 		const open=document.querySelectorAll(".show");
-		if ( !elem.hasClass("match"){
+		if ( !elem.hasClass("match")){
 			for(var e of open){
 				if(!open[e].hasClass("match")){
 					arr.push(e);
